@@ -1,0 +1,9 @@
+c:\users\rwobb\documents\visual studio 2017\Projects\painting\painting\bin\Debug\netcoreapp1.1\painting.deps.json
+c:\users\rwobb\documents\visual studio 2017\Projects\painting\painting\bin\Debug\netcoreapp1.1\painting.runtimeconfig.json
+c:\users\rwobb\documents\visual studio 2017\Projects\painting\painting\bin\Debug\netcoreapp1.1\painting.runtimeconfig.dev.json
+c:\users\rwobb\documents\visual studio 2017\Projects\painting\painting\obj\Debug\netcoreapp1.1\painting.csprojResolveAssemblyReference.cache
+c:\users\rwobb\documents\visual studio 2017\Projects\painting\painting\obj\Debug\netcoreapp1.1\painting.AssemblyInfo.cs
+c:\users\rwobb\documents\visual studio 2017\Projects\painting\painting\bin\Debug\netcoreapp1.1\painting.dll
+c:\users\rwobb\documents\visual studio 2017\Projects\painting\painting\bin\Debug\netcoreapp1.1\painting.pdb
+c:\users\rwobb\documents\visual studio 2017\Projects\painting\painting\obj\Debug\netcoreapp1.1\painting.dll
+c:\users\rwobb\documents\visual studio 2017\Projects\painting\painting\obj\Debug\netcoreapp1.1\painting.pdb
