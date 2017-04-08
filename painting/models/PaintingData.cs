@@ -7,7 +7,7 @@ namespace painting.models
 {
     public class PaintingData
     {
-        public class Rootobject
+        public class Painting
         {
             public int elapsedMilliseconds { get; set; }
             public Artobject artObject { get; set; }

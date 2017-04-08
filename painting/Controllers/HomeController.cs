@@ -9,14 +9,15 @@ namespace painting.Controllers
 {
     public class HomeController : Controller
     {
-        public async Task<IActionResult> IndexAsync()
+        public async Task<IActionResult> Index()
         {
             var service = new objectNumber_Repository();
             var numbers = await service.GetObjectNumberAsync(); 
 
             var data = await service.GetDataPaintingsAsync(numbers);
 
-            return View(numbers);
+
+            return View(data);
         }
 
 
