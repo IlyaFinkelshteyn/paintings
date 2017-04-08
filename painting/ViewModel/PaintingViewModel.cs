@@ -1,9 +1,4 @@
 ﻿using painting.models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using painting.models;
 
 namespace painting.ViewModel
 {
@@ -18,7 +13,7 @@ namespace painting.ViewModel
             , int year
             , string collection
             , string[]  colors
-            , Image.Tile[] image
+            , string image
            )
         {
             Title = title;
@@ -36,7 +31,7 @@ namespace painting.ViewModel
         public string Collection { get; private set; }
         public string Name;
         public string[] Colors;
-        public Image.Tile[] Image;  
+        public string Image;  
          
     }
 

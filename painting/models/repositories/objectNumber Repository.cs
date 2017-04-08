@@ -36,7 +36,7 @@ namespace painting.models.repositories
                 var year = output.artObject.dating.year;
                 var collection = output.artObject.objectCollection[0];
                 var colors = output.artObject.colors;
-                var image = output2.levels[4].tiles;
+                var image = output2.levels[4].tiles[0].url;
 
 
                 var painting = new PaintingViewModel(name, title, description, year, collection, colors, image);
