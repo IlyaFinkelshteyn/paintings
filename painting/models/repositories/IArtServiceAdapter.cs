@@ -3,10 +3,10 @@
 
 namespace painting.models.repositories
 {
-    interface objectNumberInterface
+    interface IArtServiceAdapter
     {
         System.Threading.Tasks.Task<IEnumerable> GetObjectNumberAsync();
-        System.Threading.Tasks.Task<IEnumerable> GetDataPaintingsAsync(System.Collections.IEnumerable objectnumbers);
+        
     }
 }
 

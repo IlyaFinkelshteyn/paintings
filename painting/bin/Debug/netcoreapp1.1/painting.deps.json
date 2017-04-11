@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v1.1",
-    "signature": "c172f4423517886467f7cfb1b9a95c7adfde4920"
+    "signature": "c57dccce76466429aac9be9068d54ad05d02fc50"
   },
   "compilationOptions": {
     "defines": [
@@ -27,9 +27,12 @@
           "Microsoft.AspNetCore": "1.1.1",
           "Microsoft.AspNetCore.Mvc": "1.1.2",
           "Microsoft.AspNetCore.StaticFiles": "1.1.1",
+          "Microsoft.Extensions.Configuration.UserSecrets": "1.1.1",
           "Microsoft.Extensions.Logging.Debug": "1.1.1",
+          "Microsoft.Extensions.Options.ConfigurationExtensions": "1.1.1",
           "Microsoft.NETCore.App": "1.1.1",
-          "Microsoft.VisualStudio.Web.BrowserLink": "1.1.0"
+          "Microsoft.VisualStudio.Web.BrowserLink": "1.1.0",
+          "RichardSzalay.MockHttp": "1.5.0"
         },
         "runtime": {
           "painting.dll": {}
@@ -847,6 +850,18 @@
           "lib/netstandard1.3/Microsoft.Extensions.Configuration.Json.dll": {}
         }
       },
+      "microsoft.extensions.configuration.usersecrets/1.1.1": {
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Json": "1.1.1",
+          "NETStandard.Library": "1.6.1"
+        },
+        "runtime": {
+          "lib/netstandard1.5/Microsoft.Extensions.Configuration.UserSecrets.dll": {}
+        },
+        "compile": {
+          "lib/netstandard1.5/Microsoft.Extensions.Configuration.UserSecrets.dll": {}
+        }
+      },
       "microsoft.extensions.dependencyinjection/1.1.0": {
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection.Abstractions": "1.1.0",
@@ -1181,6 +1196,21 @@
         },
         "compile": {
           "lib/netstandard1.0/Newtonsoft.Json.dll": {}
+        }
+      },
+      "richardszalay.mockhttp/1.5.0": {
+        "dependencies": {
+          "System.Collections": "4.3.0",
+          "System.Linq": "4.3.0",
+          "System.Net.Http": "4.3.0",
+          "System.Runtime.Extensions": "4.3.0",
+          "System.Threading": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard1.1/RichardSzalay.MockHttp.dll": {}
+        },
+        "compile": {
+          "lib/netstandard1.1/RichardSzalay.MockHttp.dll": {}
         }
       },
       "system.collections.nongeneric/4.3.0": {
@@ -3370,6 +3400,13 @@
       "path": "microsoft.extensions.configuration.json/1.1.1",
       "hashPath": "microsoft.extensions.configuration.json.1.1.1.nupkg.sha512"
     },
+    "microsoft.extensions.configuration.usersecrets/1.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-O34MbEoRGbgfls23Xp2lug46dqsd3X4fuCzXxdYa9P3bb3cp4UpCB3AY3IbzO09xYzZyJw540V8rMGIobiiKRg==",
+      "path": "microsoft.extensions.configuration.usersecrets/1.1.1",
+      "hashPath": "microsoft.extensions.configuration.usersecrets.1.1.1.nupkg.sha512"
+    },
     "microsoft.extensions.dependencyinjection/1.1.0": {
       "type": "package",
       "serviceable": true,
@@ -3537,6 +3574,13 @@
       "sha512": "sha512-U82mHQSKaIk+lpSVCbWYKNavmNH1i5xrExDEquU1i6I5pV6UMOqRnJRSlKO3cMPfcpp0RgDY+8jUXHdQ4IfXvw==",
       "path": "newtonsoft.json/9.0.1",
       "hashPath": "newtonsoft.json.9.0.1.nupkg.sha512"
+    },
+    "richardszalay.mockhttp/1.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-O6iQwqi3ID8TMz/SVrcxZARJhv/vGBi9HoNCEjVOQ9026xSl/YKnFcTjKZQu181vDFeUSsbmL+tr0OeZA32ZuA==",
+      "path": "richardszalay.mockhttp/1.5.0",
+      "hashPath": "richardszalay.mockhttp.1.5.0.nupkg.sha512"
     },
     "system.collections.nongeneric/4.3.0": {
       "type": "package",

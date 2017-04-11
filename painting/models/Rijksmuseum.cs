@@ -3,7 +3,7 @@
     public class Rijksmuseum
     {
 
-        public class ObjectNumber
+        public class PaintingSummary
         {
             public int elapsedMilliseconds { get; set; }
             public int count { get; set; }
