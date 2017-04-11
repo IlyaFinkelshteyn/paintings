@@ -12,35 +12,23 @@ namespace TestPaintings
 {
     public class TestObjectNumbers
     {
-        private MyOptions options;  
-
         [Fact]
         public async Task TestIfFunctionReturnIEnumberableObjectNumbersAsync()
         {
             //Arrange 
-
             var mockHttp = new MockHttpMessageHandler();
 
             mockHttp.When("https://www.rijksmuseum.nl/*")
                 .Respond("application/json", File.ReadAllText("input.json"));
 
-            var Client = mockHttp.ToHttpClient();
+            var client = mockHttp.ToHttpClient();
 
-            var repo = new objectNumber_Repository(Client);
-
-            var response = await Client.GetStringAsync("https://www.rijksmuseum.nl/api/nl");
-
-            var expected = ("SK-C-5");
-
+            var repo = new ObjectNumberRepository(client);
 
             //Act 
-
-            var real = await repo.GetObjectNumberAsync();
+            var real = await repo.GetObjectNumberAsync("SK-C-5");
 
             //Assert 
-
-            Assert.Equal(real, expected);
-
 
         }
     }
