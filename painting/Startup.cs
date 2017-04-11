@@ -30,7 +30,7 @@ namespace painting
             // Add api calls services 
 
             services.AddOptions();
-            services.AddTransient<objectNumber_Repository>();
+            services.AddTransient<ObjectNumberRepository>();
             services.Configure<MyOptions>(Configuration);
 
             // Add framework services.
