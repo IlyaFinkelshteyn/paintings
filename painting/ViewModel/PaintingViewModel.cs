@@ -13,7 +13,7 @@ namespace painting.ViewModel
             , int year
             , string collection
             , string[]  colors
-            , string image
+            , Image.Tile[] image
            )
         {
             Title = title;
@@ -31,7 +31,7 @@ namespace painting.ViewModel
         public string Collection { get; private set; }
         public string Name;
         public string[] Colors;
-        public string Image;  
+        public Image.Tile[] Image;  
          
     }
 

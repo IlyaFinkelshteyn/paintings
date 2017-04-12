@@ -7,7 +7,7 @@
         {
             public int elapsedMilliseconds { get; set; }
             public int count { get; set; }
-            public Artobject[] artObjects { get; set; }
+            public Artobject[] ArtObjects { get; set; }
         }
 
         public class Artobject

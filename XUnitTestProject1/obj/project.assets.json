@@ -10889,10 +10889,10 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rwobb\\documents\\visual studio 2017\\Projects\\Painting\\XUnitTestProject1\\TestPaintings.csproj",
+      "projectUniqueName": "C:\\Users\\rwobb\\Documents\\Visual Studio 2017\\Projects\\paintings\\XUnitTestProject1\\TestPaintings.csproj",
       "projectName": "TestPaintings",
-      "projectPath": "C:\\Users\\rwobb\\documents\\visual studio 2017\\Projects\\Painting\\XUnitTestProject1\\TestPaintings.csproj",
-      "outputPath": "C:\\Users\\rwobb\\documents\\visual studio 2017\\Projects\\Painting\\XUnitTestProject1\\obj\\",
+      "projectPath": "C:\\Users\\rwobb\\Documents\\Visual Studio 2017\\Projects\\paintings\\XUnitTestProject1\\TestPaintings.csproj",
+      "outputPath": "C:\\Users\\rwobb\\Documents\\Visual Studio 2017\\Projects\\paintings\\XUnitTestProject1\\obj\\",
       "projectStyle": "PackageReference",
       "originalTargetFrameworks": [
         "netcoreapp1.1"
@@ -10900,8 +10900,8 @@
       "frameworks": {
         "netcoreapp1.1": {
           "projectReferences": {
-            "C:\\Users\\rwobb\\documents\\visual studio 2017\\Projects\\Painting\\painting\\painting.csproj": {
-              "projectPath": "C:\\Users\\rwobb\\documents\\visual studio 2017\\Projects\\Painting\\painting\\painting.csproj"
+            "C:\\Users\\rwobb\\Documents\\Visual Studio 2017\\Projects\\paintings\\painting\\painting.csproj": {
+              "projectPath": "C:\\Users\\rwobb\\Documents\\Visual Studio 2017\\Projects\\paintings\\painting\\painting.csproj"
             }
           }
         }

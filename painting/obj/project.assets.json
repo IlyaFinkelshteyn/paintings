@@ -9876,10 +9876,10 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rwobb\\documents\\visual studio 2017\\Projects\\Painting\\painting\\painting.csproj",
+      "projectUniqueName": "C:\\Users\\rwobb\\Documents\\Visual Studio 2017\\Projects\\paintings\\painting\\painting.csproj",
       "projectName": "painting",
-      "projectPath": "C:\\Users\\rwobb\\documents\\visual studio 2017\\Projects\\Painting\\painting\\painting.csproj",
-      "outputPath": "C:\\Users\\rwobb\\documents\\visual studio 2017\\Projects\\Painting\\painting\\obj\\",
+      "projectPath": "C:\\Users\\rwobb\\Documents\\Visual Studio 2017\\Projects\\paintings\\painting\\painting.csproj",
+      "outputPath": "C:\\Users\\rwobb\\Documents\\Visual Studio 2017\\Projects\\paintings\\painting\\obj\\",
       "projectStyle": "PackageReference",
       "originalTargetFrameworks": [
         "netcoreapp1.1"

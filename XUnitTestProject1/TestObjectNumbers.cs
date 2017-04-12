@@ -25,11 +25,17 @@ namespace TestPaintings
 
             var repo = new ObjectNumberRepository(client);
 
+            var expected = new List<string> { "SK-A-3148", "SK-C-1367", "SK-A-4691", "SK-A-742", "SK-A-2005", "SK-A-4688"
+            , "SK-A-4981", "NG-2010-39", "NG-2010-41", "NG-2010-38" };  
+
             //Act 
             var real = await repo.GetObjectNumberAsync("SK-C-5");
-
+            
+           
             //Assert 
 
+            Assert.Equal( expected , real) ; 
+            
         }
     }
 }
