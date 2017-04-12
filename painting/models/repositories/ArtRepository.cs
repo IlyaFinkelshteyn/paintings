@@ -49,21 +49,24 @@ namespace painting.models.repositories
             return await Client.GetStringAsync("https://www.rijksmuseum.nl/api/nl/collection?key=" + key + "&format=json&type=schilderij&toppieces=True");
         }
 
-        public async Task<string[]> GetDataPaintingsAsync(IEnumerable<string> numbers, string key)
+        public async Task<IEnumerable<painting.ViewModel.PaintingViewModel>> GetDataPaintingsAsync(IEnumerable<string> numbers, string key)
         {
-            var taskList = new List<Task<string>>();
+            var Paintings2 = new List<PaintingViewModel>();  //make a empty list that will contain all the object that must be send to the View 
 
             foreach (var item in numbers)
             {
-                taskList.Add(ReadDataImageAsync(item, key));
-                taskList.Add(ReadImageUrlAsync(item,key));
+                var response = await ReadDataImageAsync(item, key); //Read the data from the api-endpoint
+                var response2 = await ReadImageUrlAsync(item, key); // Read the imageurls from another api-endpoint 
+
+                var deserializedData = deserializeData(response); // deserialize the data from the api-endpoint 
+                var deserializedImage = deserializeImage(response2); //deserialize the imageurls from the api-endpoint 
+
+                var painting = FilterDataAndImage(deserializedData, deserializedImage); //Filter the data out that I need 
+
+                Paintings2.Add(painting); //add the new object to the list
             }
 
-            var allData = await Task.WhenAll(taskList);
-
-            return allData;
-            
-
+            return Paintings2; // return the new list so I can be passed on to the view 
         }
 
         private PaintingViewModel FilterDataAndImage(Painting paintingsData, Image.Image2 imageUrlData)
