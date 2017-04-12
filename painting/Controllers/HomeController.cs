@@ -24,9 +24,9 @@ namespace painting.Controllers
 
             var numbers = await service.GetObjectNumberAsync(_options.key);
 
-            var data = service.GetDataPaintingsAsync(numbers, _options.key);
+            var data = await service.GetDataPaintingsAsync(numbers, _options.key);
 
-            return View(numbers);
+            return View(data);
             
         }
 
