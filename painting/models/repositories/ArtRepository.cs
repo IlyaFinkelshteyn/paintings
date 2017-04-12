@@ -51,22 +51,38 @@ namespace painting.models.repositories
 
         public async Task<IEnumerable<painting.ViewModel.PaintingViewModel>> GetDataPaintingsAsync(IEnumerable<string> numbers, string key)
         {
-            var Paintings2 = new List<PaintingViewModel>();  //make a empty list that will contain all the object that must be send to the View 
 
-            foreach (var item in numbers)
-            {
-                var response = await ReadDataImageAsync(item, key); //Read the data from the api-endpoint
-                var response2 = await ReadImageUrlAsync(item, key); // Read the imageurls from another api-endpoint 
+            var tasks = new List<Task<PaintingViewModel>>();
 
-                var deserializedData = deserializeData(response); // deserialize the data from the api-endpoint 
-                var deserializedImage = deserializeImage(response2); //deserialize the imageurls from the api-endpoint 
-
-                var painting = FilterDataAndImage(deserializedData, deserializedImage); //Filter the data out that I need 
-
-                Paintings2.Add(painting); //add the new object to the list
+            foreach(string number in numbers) {
+                // Initiate each download
+                tasks.Add(GetPaintingViewModelAsync(number, key));
             }
 
-            return Paintings2; // return the new list so I can be passed on to the view 
+            // Await all results
+            var paintings = await Task.WhenAll(tasks);
+
+            return paintings;
+        }
+
+        private async Task<PaintingViewModel> GetPaintingViewModelAsync(string number, string key) {
+            // Start both Tasks to fetch the data
+            var t1 = ReadDataImageAsync(number, key);
+            var t2 = ReadImageUrlAsync(number, key);
+
+            // Wait till both completes
+            await Task.WhenAll(t1, t2);
+
+            var response = await t1;
+            var response2 = await t2;
+
+            // Compute the other stuff, since this is CPU bound no others Tasks are needed
+            var deserializedData = deserializeData(response); // deserialize the data from the api-endpoint 
+            var deserializedImage = deserializeImage(response2); //deserialize the imageurls from the api-endpoint 
+
+            var painting = FilterDataAndImage(deserializedData, deserializedImage); //Filter the data out that I need 
+
+            return painting;
         }
 
         private PaintingViewModel FilterDataAndImage(Painting paintingsData, Image.Image2 imageUrlData)

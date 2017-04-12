@@ -1,20 +1,9 @@
-C:\Users\rwobb\documents\visual studio 2017\Projects\Painting\painting\bin\Debug\netcoreapp1.1\painting.deps.json
-C:\Users\rwobb\documents\visual studio 2017\Projects\Painting\painting\bin\Debug\netcoreapp1.1\painting.runtimeconfig.json
-C:\Users\rwobb\documents\visual studio 2017\Projects\Painting\painting\bin\Debug\netcoreapp1.1\painting.runtimeconfig.dev.json
-C:\Users\rwobb\documents\visual studio 2017\Projects\Painting\painting\bin\Debug\netcoreapp1.1\painting.dll
-C:\Users\rwobb\documents\visual studio 2017\Projects\Painting\painting\bin\Debug\netcoreapp1.1\painting.pdb
-C:\Users\rwobb\documents\visual studio 2017\Projects\Painting\painting\obj\Debug\netcoreapp1.1\painting.AssemblyInfo.cs
-C:\Users\rwobb\documents\visual studio 2017\Projects\Painting\painting\obj\Debug\netcoreapp1.1\painting.dll
-C:\Users\rwobb\documents\visual studio 2017\Projects\Painting\painting\obj\Debug\netcoreapp1.1\painting.pdb
-C:\Users\rwobb\documents\visual studio 2017\Projects\Painting\painting\obj\Debug\netcoreapp1.1\painting.csprojResolveAssemblyReference.cache
-C:\Users\rwobb\documents\visual studio 2017\Projects\Painting\painting\obj\Debug\netcoreapp1.1\UserSecretsAssemblyInfo.cs
-C:\Users\rwobb\Documents\Visual Studio 2017\Projects\paintings\painting\bin\Debug\netcoreapp1.1\painting.deps.json
-C:\Users\rwobb\Documents\Visual Studio 2017\Projects\paintings\painting\bin\Debug\netcoreapp1.1\painting.runtimeconfig.json
-C:\Users\rwobb\Documents\Visual Studio 2017\Projects\paintings\painting\bin\Debug\netcoreapp1.1\painting.runtimeconfig.dev.json
-C:\Users\rwobb\Documents\Visual Studio 2017\Projects\paintings\painting\bin\Debug\netcoreapp1.1\painting.dll
-C:\Users\rwobb\Documents\Visual Studio 2017\Projects\paintings\painting\bin\Debug\netcoreapp1.1\painting.pdb
-C:\Users\rwobb\Documents\Visual Studio 2017\Projects\paintings\painting\obj\Debug\netcoreapp1.1\painting.csprojResolveAssemblyReference.cache
-C:\Users\rwobb\Documents\Visual Studio 2017\Projects\paintings\painting\obj\Debug\netcoreapp1.1\UserSecretsAssemblyInfo.cs
-C:\Users\rwobb\Documents\Visual Studio 2017\Projects\paintings\painting\obj\Debug\netcoreapp1.1\painting.AssemblyInfo.cs
-C:\Users\rwobb\Documents\Visual Studio 2017\Projects\paintings\painting\obj\Debug\netcoreapp1.1\painting.dll
-C:\Users\rwobb\Documents\Visual Studio 2017\Projects\paintings\painting\obj\Debug\netcoreapp1.1\painting.pdb
+E:\Programming\Github\paintings\painting\bin\Debug\netcoreapp1.1\painting.deps.json
+E:\Programming\Github\paintings\painting\bin\Debug\netcoreapp1.1\painting.runtimeconfig.json
+E:\Programming\Github\paintings\painting\bin\Debug\netcoreapp1.1\painting.runtimeconfig.dev.json
+E:\Programming\Github\paintings\painting\bin\Debug\netcoreapp1.1\painting.dll
+E:\Programming\Github\paintings\painting\bin\Debug\netcoreapp1.1\painting.pdb
+E:\Programming\Github\paintings\painting\obj\Debug\netcoreapp1.1\UserSecretsAssemblyInfo.cs
+E:\Programming\Github\paintings\painting\obj\Debug\netcoreapp1.1\painting.AssemblyInfo.cs
+E:\Programming\Github\paintings\painting\obj\Debug\netcoreapp1.1\painting.dll
+E:\Programming\Github\paintings\painting\obj\Debug\netcoreapp1.1\painting.pdb
