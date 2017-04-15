@@ -7,3 +7,13 @@ E:\Programming\Github\paintings\painting\obj\Debug\netcoreapp1.1\UserSecretsAsse
 E:\Programming\Github\paintings\painting\obj\Debug\netcoreapp1.1\painting.AssemblyInfo.cs
 E:\Programming\Github\paintings\painting\obj\Debug\netcoreapp1.1\painting.dll
 E:\Programming\Github\paintings\painting\obj\Debug\netcoreapp1.1\painting.pdb
+C:\Users\rwobb\Documents\Visual Studio 2017\Projects\paintings\painting\bin\Debug\netcoreapp1.1\painting.deps.json
+C:\Users\rwobb\Documents\Visual Studio 2017\Projects\paintings\painting\bin\Debug\netcoreapp1.1\painting.runtimeconfig.json
+C:\Users\rwobb\Documents\Visual Studio 2017\Projects\paintings\painting\bin\Debug\netcoreapp1.1\painting.runtimeconfig.dev.json
+C:\Users\rwobb\Documents\Visual Studio 2017\Projects\paintings\painting\bin\Debug\netcoreapp1.1\painting.dll
+C:\Users\rwobb\Documents\Visual Studio 2017\Projects\paintings\painting\bin\Debug\netcoreapp1.1\painting.pdb
+C:\Users\rwobb\Documents\Visual Studio 2017\Projects\paintings\painting\obj\Debug\netcoreapp1.1\painting.csprojResolveAssemblyReference.cache
+C:\Users\rwobb\Documents\Visual Studio 2017\Projects\paintings\painting\obj\Debug\netcoreapp1.1\painting.AssemblyInfo.cs
+C:\Users\rwobb\Documents\Visual Studio 2017\Projects\paintings\painting\obj\Debug\netcoreapp1.1\painting.dll
+C:\Users\rwobb\Documents\Visual Studio 2017\Projects\paintings\painting\obj\Debug\netcoreapp1.1\painting.pdb
+C:\Users\rwobb\Documents\Visual Studio 2017\Projects\paintings\painting\obj\Debug\netcoreapp1.1\UserSecretsAssemblyInfo.cs

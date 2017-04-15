@@ -20,7 +20,7 @@ namespace painting.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var service = new ObjectNumberRepository(Client);
+            var service = new ObjectNumberRepository();
 
             var numbers = await service.GetObjectNumberAsync(_options.key);
 

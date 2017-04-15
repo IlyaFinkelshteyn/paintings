@@ -14,11 +14,12 @@ namespace painting.models.repositories
 {
     public class ObjectNumberRepository : IArtServiceAdapter
     {
-        public ObjectNumberRepository(HttpClient mockedHttpClient)
-        {
-            Client = mockedHttpClient; 
-        }
 
+        public ObjectNumberRepository()
+        {
+                
+        }
+        
         private HttpClient Client { get; }
 
         public async Task<IEnumerable<string>> GetObjectNumberAsync(string key)

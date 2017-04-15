@@ -1,12 +1,9 @@
-using painting.models.repositories;
-using RichardSzalay.MockHttp;
-using System;
-using System.Collections.Generic;
-using System.IO;
 using Xunit;
-using painting.models;
-using System.Collections;
 using System.Threading.Tasks;
+using WorldDomination.Net.Http;
+using System.IO;
+using painting.models.repositories;
+using System.Net.Http;
 
 namespace TestPaintings
 {
@@ -15,27 +12,25 @@ namespace TestPaintings
         [Fact]
         public async Task TestIfFunctionReturnIEnumberableObjectNumbersAsync()
         {
-            //Arrange 
-            var mockHttp = new MockHttpMessageHandler();
 
-            mockHttp.When("https://www.rijksmuseum.nl/*")
-                .Respond("application/json", File.ReadAllText("input.json"));
+            // Fake response.
+            var responseData = File.ReadAllText("input.json");
+            var messageResponse = FakeHttpMessageHandler.GetStringHttpResponseMessage(responseData);
+            var repo = new ObjectNumberRepository();
 
-            var client = mockHttp.ToHttpClient();
+            var options = new HttpMessageOptions
+            {
+                RequestUri = "https://www.rijksmuseum.nl/api/nl/collection?key=secret&format=json&type=schilderij&toppieces=True", 
+                HttpResponseMessage = messageResponse
+            };
 
-            var repo = new ObjectNumberRepository(client);
+            var messageHandler = new FakeHttpMessageHandler(options);
 
-            var expected = new List<string> { "SK-A-3148", "SK-C-1367", "SK-A-4691", "SK-A-742", "SK-A-2005", "SK-A-4688"
-            , "SK-A-4981", "NG-2010-39", "NG-2010-41", "NG-2010-38" };  
+            // Act 
+            var result = await repo.GetObjectNumberAsync("secret");
 
-            //Act 
-            var real = await repo.GetObjectNumberAsync("SK-C-5");
-            
-           
-            //Assert 
 
-            Assert.Equal( expected , real) ; 
-            
+
         }
     }
 }

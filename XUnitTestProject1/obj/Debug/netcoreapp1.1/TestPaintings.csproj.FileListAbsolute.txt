@@ -13,3 +13,20 @@ E:\Programming\Github\paintings\XUnitTestProject1\obj\Debug\netcoreapp1.1\TestPa
 E:\Programming\Github\paintings\XUnitTestProject1\obj\Debug\netcoreapp1.1\TestPaintings.AssemblyInfo.cs
 E:\Programming\Github\paintings\XUnitTestProject1\obj\Debug\netcoreapp1.1\TestPaintings.dll
 E:\Programming\Github\paintings\XUnitTestProject1\obj\Debug\netcoreapp1.1\TestPaintings.pdb
+C:\Users\rwobb\Documents\Visual Studio 2017\Projects\paintings\XUnitTestProject1\bin\Debug\netcoreapp1.1\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\Users\rwobb\Documents\Visual Studio 2017\Projects\paintings\XUnitTestProject1\bin\Debug\netcoreapp1.1\xunit.runner.utility.netstandard15.dll
+C:\Users\rwobb\Documents\Visual Studio 2017\Projects\paintings\XUnitTestProject1\bin\Debug\netcoreapp1.1\xunit.runner.reporters.netstandard15.dll
+C:\Users\rwobb\Documents\Visual Studio 2017\Projects\paintings\XUnitTestProject1\bin\Debug\netcoreapp1.1\input.json
+C:\Users\rwobb\Documents\Visual Studio 2017\Projects\paintings\XUnitTestProject1\bin\Debug\netcoreapp1.1\TestPaintings.deps.json
+C:\Users\rwobb\Documents\Visual Studio 2017\Projects\paintings\XUnitTestProject1\bin\Debug\netcoreapp1.1\TestPaintings.runtimeconfig.json
+C:\Users\rwobb\Documents\Visual Studio 2017\Projects\paintings\XUnitTestProject1\bin\Debug\netcoreapp1.1\TestPaintings.runtimeconfig.dev.json
+C:\Users\rwobb\Documents\Visual Studio 2017\Projects\paintings\XUnitTestProject1\bin\Debug\netcoreapp1.1\TestPaintings.dll
+C:\Users\rwobb\Documents\Visual Studio 2017\Projects\paintings\XUnitTestProject1\bin\Debug\netcoreapp1.1\TestPaintings.pdb
+C:\Users\rwobb\Documents\Visual Studio 2017\Projects\paintings\XUnitTestProject1\bin\Debug\netcoreapp1.1\painting.dll
+C:\Users\rwobb\Documents\Visual Studio 2017\Projects\paintings\XUnitTestProject1\bin\Debug\netcoreapp1.1\painting.pdb
+C:\Users\rwobb\Documents\Visual Studio 2017\Projects\paintings\XUnitTestProject1\obj\Debug\netcoreapp1.1\TestPaintings.csprojResolveAssemblyReference.cache
+C:\Users\rwobb\Documents\Visual Studio 2017\Projects\paintings\XUnitTestProject1\obj\Debug\netcoreapp1.1\TestPaintings.AssemblyInfo.cs
+C:\Users\rwobb\Documents\Visual Studio 2017\Projects\paintings\XUnitTestProject1\obj\Debug\netcoreapp1.1\TestPaintings.dll
+C:\Users\rwobb\Documents\Visual Studio 2017\Projects\paintings\XUnitTestProject1\obj\Debug\netcoreapp1.1\TestPaintings.pdb
+C:\Users\rwobb\Documents\Visual Studio 2017\Projects\paintings\XUnitTestProject1\bin\Debug\netcoreapp1.1\data.json
+C:\Users\rwobb\Documents\Visual Studio 2017\Projects\paintings\XUnitTestProject1\bin\Debug\netcoreapp1.1\image.json
