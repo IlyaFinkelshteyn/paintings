@@ -6,21 +6,25 @@ using System.Threading.Tasks;
 using Newtonsoft.Json.Serialization;
 using Painting.Website.ViewModel;
 using System;
-using static Painting.Website.Models.Rijksmuseum;
 using Painting.Website.Models;
 
 namespace Painting.Website.Repositories
 {
     public class ObjectNumberRepository : IArtServiceAdapter
     {
+        private static HttpClient _httpClient;
 
-        public ObjectNumberRepository()
+        public ObjectNumberRepository(HttpClientHandler httpClientHandler = null)
         {
-                
+            // We have 1x instance of the httpclient, always.
+            // That said, do we hit a real endpoint on the internet OR do we just
+            // provide some fake response data, given some hard-coded request details
+            // (which is what we would do if this was a unit-test).
+            _httpClient = httpClientHandler == null
+                ? new HttpClient()
+                : new HttpClient(httpClientHandler);
         }
         
-        private HttpClient Client { get; }
-
         public async Task<IEnumerable<string>> GetObjectNumberAsync(string key)
         {
             var paintingsAsJson = await ReadApiAsync(key);
@@ -30,23 +34,23 @@ namespace Painting.Website.Repositories
             return FilterObjectNumber(serializedJson);
         }
 
-        private static IEnumerable<string> FilterObjectNumber(PaintingSummary output)
+        private static IEnumerable<string> FilterObjectNumber(Rijksmuseum.PaintingSummary output)
         {
             return output.ArtObjects.Select(o => o.objectNumber);
         }
 
-        private static PaintingSummary Deserialize(string response)
+        private static Rijksmuseum.PaintingSummary Deserialize(string response)
         {
             var serializerSettings = new JsonSerializerSettings()
             {
                 ContractResolver = new CamelCasePropertyNamesContractResolver()
             };
-            return JsonConvert.DeserializeObject<PaintingSummary>(response, serializerSettings); 
+            return JsonConvert.DeserializeObject<Rijksmuseum.PaintingSummary>(response, serializerSettings); 
         }
 
         private async Task<string> ReadApiAsync(string key)
         {
-            return await Client.GetStringAsync("https://www.rijksmuseum.nl/api/nl/collection?key=" + key + "&format=json&type=schilderij&toppieces=True");
+            return await _httpClient.GetStringAsync("https://www.rijksmuseum.nl/api/nl/collection?key=" + key + "&format=json&type=schilderij&toppieces=True");
         }
 
         public async Task<IEnumerable<PaintingViewModel>> GetDataPaintingsAsync(IEnumerable<string> numbers, string key)
@@ -112,12 +116,12 @@ namespace Painting.Website.Repositories
 
         private async Task<string> ReadImageUrlAsync(string item, string key)
         {
-            return await Client.GetStringAsync(("https://www.rijksmuseum.nl/api/nl/collection/" + item + "/tiles?key="  + key + "&format=json"));
+            return await _httpClient.GetStringAsync(("https://www.rijksmuseum.nl/api/nl/collection/" + item + "/tiles?key="  + key + "&format=json"));
         }
 
         private async Task<string> ReadDataImageAsync(string item,  string key)
         {
-            return await Client.GetStringAsync(("https://www.rijksmuseum.nl/api/nl/collection/" + item + "?key="  + key + "&format=json"));
+            return await _httpClient.GetStringAsync(("https://www.rijksmuseum.nl/api/nl/collection/" + item + "?key="  + key + "&format=json"));
                  
         }
 
