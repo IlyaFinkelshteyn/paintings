@@ -6,6 +6,7 @@ using System.IO;
 using System.Net.Http;
 using Shouldly;
 using System.Linq;
+using Painting.Website.Models; 
 
 namespace Painting.Website.Tests
 {
@@ -25,12 +26,8 @@ namespace Painting.Website.Tests
             };
             var messageHandler = new FakeHttpMessageHandler(options);
 
-            // Tell the repository to use this fake request/response data so we don't
-            // really hit the internets.
-            var repository = new ObjectNumberRepository(messageHandler);
-
             // Act.
-            var results = (await repository.GetObjectNumberAsync("secret")).ToArray();
+            var results = (await GetObjectNumberAsync("secret")).ToArray();
 
             // Assert.
             options.NumberOfTimesCalled.ShouldBe(1); // We only called that HttpMethod + Uri once.

@@ -25,30 +25,7 @@ namespace Painting.Website.Repositories
                 : new HttpClient(httpClientHandler);
         }
         
-        public async Task<IEnumerable<string>> GetObjectNumberAsync(string key)
-        {
-            var paintingsAsJson = await ReadApiAsync(key);
-
-            var serializedJson = Deserialize(paintingsAsJson);
-
-            return FilterObjectNumber(serializedJson);
-        }
-
-        private static IEnumerable<string> FilterObjectNumber(Rijksmuseum.PaintingSummary output)
-        {
-            return output.ArtObjects.Select(o => o.objectNumber);
-        }
-
-        private static Rijksmuseum.PaintingSummary Deserialize(string response)
-        {
-            var serializerSettings = new JsonSerializerSettings()
-            {
-                ContractResolver = new CamelCasePropertyNamesContractResolver()
-            };
-            return JsonConvert.DeserializeObject<Rijksmuseum.PaintingSummary>(response, serializerSettings); 
-        }
-
-        private async Task<string> ReadApiAsync(string key)
+        public async Task<string> ReadApiAsync(string key)
         {
             return await _httpClient.GetStringAsync("https://www.rijksmuseum.nl/api/nl/collection?key=" + key + "&format=json&type=schilderij&toppieces=True");
         }
