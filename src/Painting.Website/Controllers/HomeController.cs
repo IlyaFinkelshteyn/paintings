@@ -9,24 +9,24 @@ namespace Painting.Website.Controllers
 {
     public class HomeController : Controller
     {
-        private static readonly HttpClient Client = new HttpClient();
 
         private readonly MyOptions _options;
+        private readonly IPaintings _painting;
 
-        public HomeController(IOptions<MyOptions> optionsAccessor)
+        public HomeController(IPaintings painting, IOptions<MyOptions> optionsAccessor)
         {
+            _painting = painting;
             _options = optionsAccessor.Value;
         }
 
+
         public async Task<IActionResult> Index()
         {
-            var service = new ObjectNumberRepository();
+            var numbers = await _painting.GetObjectNumberAsync(_options.key);
 
-            var numbers = await service.GetObjectNumberAsync(_options.key);
+            //var data = await service.GetDataPaintingsAsync(numbers, _options.key);
 
-            var data = await service.GetDataPaintingsAsync(numbers, _options.key);
-
-            return View(data);
+            return View(numbers);
             
         }
 

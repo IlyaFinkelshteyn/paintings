@@ -6,7 +6,7 @@ namespace Painting.Website.Repositories
 {
     public interface IArtServiceAdapter
     {
-        Task<IEnumerable<Painting.Website.ViewModel.PaintingViewModel>> GetDataPaintingsAsync(IEnumerable<string> numbers, string key); 
+        Task<string> ReadApiAsync(string key);
     }
 }
 

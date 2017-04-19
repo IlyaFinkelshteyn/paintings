@@ -30,7 +30,9 @@ namespace Painting.Website
 
             services.AddOptions();
             services.AddTransient<ObjectNumberRepository>();
+            services.AddTransient<IPaintings, Paintings>();
             services.Configure<MyOptions>(Configuration);
+            services.AddTransient<IArtServiceAdapter, ObjectNumberRepository>(); 
 
             // Add framework services.
             services.AddMvc();

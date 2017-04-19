@@ -8,12 +8,18 @@ using System.Threading.Tasks;
 
 namespace Painting.Website.Models
 {
-    public class Painting
+    public class Paintings : IPaintings 
     {
+        private IArtServiceAdapter _service;
+
+        public Paintings(IArtServiceAdapter service)
+        {
+            _service = service;        
+        }
+
         public async Task<IEnumerable<string>> GetObjectNumberAsync(string key)
         {
-            var service = new ObjectNumberRepository();
-            var paintingsAsJson = await service.ReadApiAsync(key);
+            var paintingsAsJson = await  _service.ReadApiAsync(key);
 
             var serializedJson = Deserialize(paintingsAsJson);
 

@@ -102,10 +102,10 @@ namespace Painting.Website.Repositories
                  
         }
 
-        Task<IEnumerable<PaintingViewModel>> IArtServiceAdapter.GetDataPaintingsAsync(IEnumerable<string> numbers, string key)
-        {
-            throw new NotImplementedException();
-        }
+        //Task<IEnumerable<PaintingViewModel>> IArtServiceAdapter.GetDataPaintingsAsync(IEnumerable<string> numbers, string key)
+        //{
+        //    throw new NotImplementedException();
+        //}
     }
 }
 
