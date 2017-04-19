@@ -8,11 +8,12 @@ install:
 
 before_build:
 
-- ps: nuget restore
-
+- ps: dotnet restore
+build_script:
+- ps: dotnet build
 test_script:
 - dotnet test .\tests\Painting.Website.Tests.csproj
 
 build:
 
-  verbosity: minimal
+ Â verbosity: minimal
