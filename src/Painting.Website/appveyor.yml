@@ -1,0 +1,18 @@
+version: 1.0.{build}
+
+image: Visual Studio 2017
+
+install:
+
+- ps: nuget sources add -Name roelo -Source https://www.myget.org/F/pk-development/api/v2
+
+before_build:
+
+- ps: nuget restore
+
+test_script:
+- dotnet test .\tests\Painting.Website.Tests.csproj
+
+build:
+
+  verbosity: minimal
